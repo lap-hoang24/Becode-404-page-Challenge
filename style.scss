@@ -8,7 +8,6 @@
 
 body {
     width: 100%;
-    height: 100vh;
     background-color: black;
     color: white;
     font-family: 'Reenie Beanie', cursive;
@@ -45,8 +44,7 @@ header {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 0.3fr 0.7fr 0.7fr ;
-
+    grid-template-rows: 0.3fr 0.7fr 0.7fr 20px;
 }
 
 .talking {
@@ -100,8 +98,6 @@ header {
         z-index: -999;
     }
 
-
-
     img {
         width: 100%;
         display: block;
@@ -137,4 +133,107 @@ header {
         padding: 0 0.5rem;
     }
 
+}
+
+
+.credit {
+    grid-area: 4/1/4/4;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    a {
+        text-decoration: none;
+        margin-left: 3rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .fa {
+            margin-left: 0.5rem;
+        }
+    }
+
+    a:visited {
+        color: white;
+    }
+
+    .credit-img {
+        margin-right: 3rem;
+    }
+
+
+}
+
+
+// -------------------MEDIA QUERIES--------------------
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+        
+    .page-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 0.3fr 0.5fr 0.3fr 50px;
+    }
+    
+    .talking {
+        grid-area: 1/1/2/4;
+        font-size: 0.8rem;
+        padding: 1rem;
+
+        #me {
+            font-size: 4rem;
+        }
+    }
+    
+    .img-wrapper {
+        grid-area: 2/1/2/4;
+        margin: 2rem;
+    
+        #oops {
+            top: -50px;
+            right: -30px;
+            width: 50px;
+            height: 40px;
+            font-size: 1rem;
+        }
+    
+        #oops::after {
+            width: 10px;
+            height: 10px;
+            transform: skewX(-45deg) rotateZ(130deg);
+            bottom: 0px;
+        }
+    }
+    
+    .message-404 {
+        font-size: 0.8rem;
+
+        #four0four {
+            font-size: 4rem;
+        }
+    }
+    
+    .credit {
+        font-size: 0.7rem;
+        flex-flow: column wrap;
+        justify-content: flex-end;
+        align-items: center;
+        a {
+            justify-content: center;
+            align-items: center;
+            margin-left: 0;
+            .fa {
+                margin-left: 0.5rem;
+            }
+        }
+    
+        a:visited {
+            color: white;
+        }
+    }
+
+    .credit-img {
+        margin-right: 0rem;
+    }
 }

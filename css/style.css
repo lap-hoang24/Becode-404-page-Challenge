@@ -8,7 +8,6 @@
 
 body {
   width: 100%;
-  height: 100vh;
   background-color: black;
   color: white;
   font-family: 'Reenie Beanie', cursive;
@@ -59,8 +58,8 @@ header ul img {
   display: grid;
   -ms-grid-columns: 1fr 3fr 1fr;
       grid-template-columns: 1fr 3fr 1fr;
-  -ms-grid-rows: 0.3fr 0.7fr 0.7fr;
-      grid-template-rows: 0.3fr 0.7fr 0.7fr;
+  -ms-grid-rows: 0.3fr 0.7fr 0.7fr 20px;
+      grid-template-rows: 0.3fr 0.7fr 0.7fr 20px;
 }
 
 .talking {
@@ -175,5 +174,127 @@ header ul img {
   -webkit-background-clip: text;
   background-clip: text;
   padding: 0 0.5rem;
+}
+
+.credit {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: 4/1/4/4;
+  font-size: 1.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.credit a {
+  text-decoration: none;
+  margin-left: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.credit a .fa {
+  margin-left: 0.5rem;
+}
+
+.credit a:visited {
+  color: white;
+}
+
+.credit .credit-img {
+  margin-right: 3rem;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .page-container {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 3fr 1fr;
+        grid-template-columns: 1fr 3fr 1fr;
+    -ms-grid-rows: 0.3fr 0.5fr 0.3fr 50px;
+        grid-template-rows: 0.3fr 0.5fr 0.3fr 50px;
+  }
+  .talking {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: 1/1/2/4;
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+  .talking #me {
+    font-size: 4rem;
+  }
+  .img-wrapper {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: 2/1/2/4;
+    margin: 2rem;
+  }
+  .img-wrapper #oops {
+    top: -50px;
+    right: -30px;
+    width: 50px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  .img-wrapper #oops::after {
+    width: 10px;
+    height: 10px;
+    -webkit-transform: skewX(-45deg) rotateZ(130deg);
+            transform: skewX(-45deg) rotateZ(130deg);
+    bottom: 0px;
+  }
+  .message-404 {
+    font-size: 0.8rem;
+  }
+  .message-404 #four0four {
+    font-size: 4rem;
+  }
+  .credit {
+    font-size: 0.7rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .credit a {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 0;
+  }
+  .credit a .fa {
+    margin-left: 0.5rem;
+  }
+  .credit a:visited {
+    color: white;
+  }
+  .credit-img {
+    margin-right: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
