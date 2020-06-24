@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    font-family: 'Reenie Beanie', cursive;
+}
+
+header {
+    width: 100%;
+    height: 3vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 15px;
+    }
+
+    ul li {
+        list-style: none;
+        width: 30px;
+        height: 15px;
+    }
+    ul img {
+        width: 80%;
+        height: 100%;
+    }
+}
+
+
+.page-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 0.3fr 0.7fr 0.7fr ;
+
+}
+
+.talking {
+    grid-area: 1/2/1/3;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;;
+
+    #me {
+        font-size: 7rem;
+    }
+}
+
+
+.img-wrapper {
+    grid-area: 2/2/2/3;
+    width: 70%;
+    margin: auto;
+    position: relative;
+
+    #oops {
+        position: absolute;
+        background-color: white;
+        top: -40px;
+        right: -250px;
+        width: 200px;
+        height: 130px;
+        // border: 3px dashed white;
+        border-radius: 60%;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4rem;
+    }
+
+    #oops::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: white;
+        width: 50px;
+        height: 50px;
+        transform: skewX(-45deg) rotateZ(90deg);
+        bottom: 20px;
+        left: 15px;
+        z-index: -999;
+    }
+
+
+
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+
+
+.message-404 {
+    
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 3; 
+    font-size: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    #four0four {
+        font-size: 10rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: transparent;
+    }
+
+    #back {
+        background: linear-gradient(90deg, rgb(231, 86, 188), rgb(32, 238, 221));
+        -webkit-background-clip: text;
+        background-clip: text;
+        padding: 0 0.5rem;
+    }
+
+}
